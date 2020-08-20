@@ -13,6 +13,7 @@ class Launch(models.Model):
     customer = models.CharField(max_length=100)
     nationality = models.CharField(max_length=100)
     launch_success = models.BooleanField()
+    video_link = models.CharField(max_length=100, null=True)
 
     def as_json(self):
         return dict(
@@ -27,5 +28,6 @@ class Launch(models.Model):
             site_name=self.site_name,
             customer=self.customer,
             nationality=self.nationality,
-            launch_success=self.launch_success
+            launch_success=self.launch_success,
+            video_link=self.video_link
         )

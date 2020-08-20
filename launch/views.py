@@ -29,6 +29,9 @@ class Rocket(object):
             launch.customer = json['rocket']['second_stage']['payloads'][0]['customers'][0]
             launch.nationality = json['rocket']['second_stage']['payloads'][0]['nationality']
             launch.launch_success = False
+            launch.video_link = json['links']['video_link']
+
+            print(json.keys())
 
             serializer = LaunchSerializer(data=launch.as_json())
 
@@ -55,6 +58,7 @@ class Rocket(object):
             launch.customer = json['rocket']['second_stage']['payloads'][0]['customers'][0]
             launch.nationality = json['rocket']['second_stage']['payloads'][0]['nationality']
             launch.launch_success = False
+            launch.video_link = json['links']['video_link']
 
             serializer = LaunchSerializer(data=launch.as_json())
 
