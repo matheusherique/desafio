@@ -14,6 +14,8 @@ ADD .secret_key.sh /rest/.secret_key.sh
 
 RUN pip3 install -r requirements.txt
 
+# Give permission and execute shell
+
 RUN chmod +x .secret_key.sh
 
 RUN ./.secret_key.sh
