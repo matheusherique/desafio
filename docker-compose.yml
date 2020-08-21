@@ -8,3 +8,14 @@ services:
             - .:/rest
         ports:
             - 8000:8000
+
+    frontend:
+        build: ./frontend
+        tty: true
+        volumes:
+            - ./frontend:/frontend
+        ports:
+            - "3000:3000"
+        depends_on:
+            - rest
+        command: npm start
