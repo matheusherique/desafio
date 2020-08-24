@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-import List from '../components/List.js';
+import OneListView from '../components/OneListView.js';
 
 export default class LatestLaunch extends React.Component {
   state = {
@@ -8,7 +8,7 @@ export default class LatestLaunch extends React.Component {
   }
 
   componentDidMount() {
-    axios.get(`http://0.0.0.0:8000/latest`)
+    axios.get(`http://0.0.0.0:8000/latest/`)
       .then(res => {
         const rockets = res.data;
         console.log(rockets)
@@ -18,7 +18,7 @@ export default class LatestLaunch extends React.Component {
 
   render() {
     return (
-        <List data={this.state.launch} />
+        <OneListView data={this.state.launch} />
     );
   }
 }

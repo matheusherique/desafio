@@ -118,7 +118,7 @@ class Rocket(object):
                 __launch.nationality = flight['rocket']['second_stage']['payloads'][0]['nationality']
                 __launch.manufacturer = flight['rocket']['second_stage']['payloads'][0]['manufacturer']
                 __launch.launch_success = False
-                __launch.video_link = "https://www.youtube.com/embed/" + flight['links']['video_link']
+                __launch.video_link = "https://www.youtube.com/embed/" + flight['links']['youtube_id']
 
                 __launches.append(__launch.as_json())
                 __serializer = LaunchSerializer(data=__launch.as_json())

@@ -8,7 +8,7 @@ export default class UpcomingLaunch extends React.Component {
   }
 
   componentDidMount() {
-    axios.get(`http://0.0.0.0:8000/upcoming`)
+    axios.get(`http://0.0.0.0:8000/upcoming/`)
       .then(res => {
         const rockets = res.data;
 

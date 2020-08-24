@@ -1,3 +1,5 @@
 Django
 djangorestframework
 requests
+django-cors-headers
+django-cors-middleware

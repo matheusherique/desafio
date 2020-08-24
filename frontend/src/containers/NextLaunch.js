@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-import List from '../components/List.js';
+import OneListView from '../components/OneListView.js';
 
 class NextLaunch extends React.Component {
   state = {
@@ -8,9 +8,10 @@ class NextLaunch extends React.Component {
   }
 
   componentDidMount() {
-    axios.get(`http://0.0.0.0:8000/next`)
+    axios.get(`http://0.0.0.0:8000/next/`)
       .then(res => {
         const rockets = res.data;
+        rockets.video_link = 'https://www.youtube.com/embed/Tk338VXcb24';
         console.log(rockets)
         this.setState({ launch: rockets });
       })
@@ -18,7 +19,7 @@ class NextLaunch extends React.Component {
 
   render() {
     return (
-        <List data={this.state.launch} />
+        <OneListView data={this.state.launch} />
     );
   }
 }
