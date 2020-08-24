@@ -14,7 +14,7 @@ export default class UpcomingLaunch extends React.Component {
 
         for (var i = 0; i < rockets.length; i++) {
           if (rockets[i].video_link === null) {
-            rockets[i].video_link = 'https://youtu.be/Tk338VXcb24';
+            rockets[i].video_link = 'https://www.youtube.com/embed/Tk338VXcb24';
           }
 
           if (rockets[i].site_name === null) {
