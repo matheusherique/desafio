@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import axios from 'axios';
-import withListLoading from '../components/withListLoading';
 import List from '../components/List.js';
 
 export default class LatestLaunch extends React.Component {

@@ -1,11 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import axios from 'axios';
-import withListLoading from '../components/withListLoading';
-import List from '../components/List.js';
+import PaginationList from '../components/PaginationList.js';
 
 export default class UpcomingLaunch extends React.Component {
   state = {
-    launch: {}
+    launch: []
   }
 
   componentDidMount() {
@@ -19,7 +18,7 @@ export default class UpcomingLaunch extends React.Component {
 
   render() {
     return (
-        <List data={this.state.launch} />
+        <PaginationList data={this.state.launch} />
     );
   }
 }
