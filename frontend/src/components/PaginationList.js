@@ -40,12 +40,12 @@ const PaginationList = (props) => {
             <Row gutter={16}>
             <Col span={8}>
                 <Card title="Horário local" bordered={true}>
-                {item.launch_date_local}
+                {Moment(item.launch_date_local).format('HH:mm - DD MMM, YYYY')}
                 </Card>
             </Col>
             <Col span={8}>
                 <Card title="Horário UTC" bordered={true}>
-                {item.launch_date_utc}
+                {Moment(item.launch_date_utc).format('HH:mm (UTCZ) - DD MMM, YYYY')}
                 </Card>
             </Col>
             <Col span={8}>

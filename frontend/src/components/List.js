@@ -1,5 +1,6 @@
 import React from 'react';
 import { Card, Row, Col } from 'antd';
+import Moment from 'moment';
 
 const List = (props) => {
   console.log(props.data)
@@ -8,12 +9,12 @@ const List = (props) => {
             <Row gutter={16}>
             <Col span={8}>
                 <Card title="Horário local" bordered={true}>
-                {props.data.launch_date_local}
+                {Moment(props.data.launch_date_local).format('HH:mm - DD MMM, YYYY')}
                 </Card>
             </Col>
             <Col span={8}>
                 <Card title="Horário UTC" bordered={true}>
-                {props.data.launch_date_utc}
+                {Moment(props.data.launch_date_utc).format('HH:mm (UTCZ) - DD MMM, YYYY')}
                 </Card>
             </Col>
             <Col span={8}>
