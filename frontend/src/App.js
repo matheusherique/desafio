@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import TabsMenu from './components/Layouts';
+import TabsMenu from './components/Navbar';
 
 function App() {
   return (
